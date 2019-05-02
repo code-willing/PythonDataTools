@@ -31,7 +31,7 @@ with open(args.file, 'r') as input_file:
     ## skip header if it exists and we are looking for a column number
     if args.has_header:
       next(reader, None)
-  
+
     for row in reader:
       lines_read += 1
       column_total += int(row[args.column - 1])
@@ -42,4 +42,4 @@ with open(args.file, 'r') as input_file:
     exit()
 
 print("Lines read     : " + str(lines_read))
-print("Columns summed : " + str(column_total))
+print("Total Sum      : " + str(column_total))
