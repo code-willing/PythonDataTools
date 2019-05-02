@@ -14,4 +14,6 @@ Get the total sum of a column in a delimited data file
 
 Get the unique values from a column in a delimited data file
 
+## verify_columns.py
 
+Verfiy that all rows in delimited data have the same number of columns
