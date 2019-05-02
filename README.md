@@ -131,3 +131,27 @@ Number of Unique Values in column: 3
 ## verify_columns.py
 
 Verfiy that all rows in delimited data have the same number of columns
+
+### Example Usage
+
+```
+$ cat ../test/test_3.csv
+column1,column2,column3,column4,
+1,1,1,1,
+1,1,1,
+1,1,1,1,
+1,1,1,1,
+
+$ python verify_columns.py -f ../test/test_3.csv
+Number of Header Columns: 5
+Mismatched number of columns at line: 3
+Number of columns at line 3: 4
+
+Header:
+column1 | column2 | column3 | column4 |
+
+Mismatched row:
+1 | 1 | 1 |
+
+
+```

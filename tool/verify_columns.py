@@ -23,17 +23,12 @@ with open(args.file, 'r') as input_file:
 
     if len(line_values) != header_cols:
         print("Mismatched number of columns at line: " + str(line_num))
-        print("Number of columns at line " + str(line_num) + ": " + str(len(line_values)))
+        print("Number of columns at line " + str(line_num) + ": " + str(len(line_values)) + '\n')
 
         if not args.no_header:
-          for name in header_row:
-            print(name + " | ", end='')
-          print()
+          print("Header:\n" + " | ".join(header_row))
 
-        for value in line_values:
-          print(value + " | ", end='')
-
-        print()
+        print("Mismatched row:\n" + " | ".join(line_values))
         exit()
 
 print("File OK, Lines Read: " + str(line_num))
