@@ -6,6 +6,27 @@ Python scripts for manipulating data files
 
 Get a column slice of a delimited data file
 
+### Example Usage
+
+#### Cutting a CSV file by column number
+
+```$ cat ../test/test_2.csv
+column1,column2,column3,column4,
+1,1,1,1,
+2,1,1,1,
+3,2,1,1,
+4,3,2,1,
+5,4,3,2,
+
+$ python cut_columns.py -f ../test/test_2.csv -c 1,2
+column1,column2,
+1,1,
+2,1,
+3,2,
+4,3,
+5,4,
+```
+
 ## sum_column.py
 
 Get the total sum of a column in a delimited data file
