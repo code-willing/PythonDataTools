@@ -10,7 +10,8 @@ Get a column slice of a delimited data file
 
 #### Cutting a CSV file by column number
 
-```$ cat ../test/test_2.csv
+```
+$ cat ../test/test_2.csv
 column1,column2,column3,column4,
 1,1,1,1,
 2,1,1,1,
@@ -20,6 +21,26 @@ column1,column2,column3,column4,
 
 $ python cut_columns.py -f ../test/test_2.csv -c 1,2
 column1,column2,
+1,1,
+2,1,
+3,2,
+4,3,
+5,4,
+```
+
+#### Cutting a CSV by column name
+
+```
+$ cat ../test/test_2.csv
+column1,column2,column3,column4,
+1,1,1,1,
+2,1,1,1,
+3,2,1,1,
+4,3,2,1,
+5,4,3,2,
+
+$ python cut_columns.py -f ../test/test_2.csv -n column1, column2
+column1,column2
 1,1,
 2,1,
 3,2,
