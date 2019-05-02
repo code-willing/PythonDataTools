@@ -9,7 +9,7 @@ parser.add_argument('-f', '--file', help="File to read from", required=True)
 parser.add_argument('-c', '--column', help="Column number to sum(starting with 1)", type=int)
 parser.add_argument('-n', '--column_name', help="Column name to sum(Assumes header row exists)")
 parser.add_argument('-d', '--delimiter', help="CSV Delimiter(defaults to ',')", default=',')
-parser.add_argument('--has_header', help="Specify that CSV has no header", action='store_true')
+parser.add_argument('--has_header', help="Specify that CSV has a header", action='store_true')
 
 args = parser.parse_args()
 
