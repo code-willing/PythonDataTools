@@ -1,5 +1,7 @@
 ''' Get the total value of a column '''
 
+from __future__ import print_function
+
 import csv
 import sys, os
 import argparse

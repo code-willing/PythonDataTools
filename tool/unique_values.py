@@ -1,3 +1,7 @@
+''' Get unique values from a column in a delimited data file '''
+
+from __future__ import print_function
+
 import sys
 import argparse
 import csv
@@ -26,7 +30,7 @@ with open(args.file, 'r') as input_file:
     ## skip header if it exists and we are looking for a column number
     if args.has_header:
       next(reader, None)
-  
+
     [sym.add(row[args.column - 1]) for row in reader]
 
   else:

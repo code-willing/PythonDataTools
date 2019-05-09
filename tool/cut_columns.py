@@ -1,3 +1,7 @@
+''' Get a subset of delimited columns from a data file '''
+
+from __future__ import print_function
+
 import sys
 import argparse
 import csv
@@ -21,7 +25,10 @@ with open(args.file, 'r') as input_file:
     header_names = args.column_names.split(',')
     reader = csv.DictReader(input_file, delimiter=args.delimiter)
 
+    ## there is a more pythonical way to do this
+    ## probably some insane generator
     for row in reader:
+      print(args.delimiter.join)
       for name in header_names:
         print(row[name] + args.delimiter, end='')
       print()
