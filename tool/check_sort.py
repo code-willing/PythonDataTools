@@ -20,14 +20,14 @@ current_val = None
 whole_curr_row = None
 lines_read = 1
 
-def argument_error(): 
+def argument_error():
   parser.print_help()
   exit()
 
 def out_of_order(row_first, row_second, current_line, order):
   print("Not in " + order + " order:")
   print("Line " + str(current_line - 1) + ": " + args.delimiter.join(row_first))
-  print("Line " + str(current_line) + ": " + args.delimiter.join(row_second))  
+  print("Line " + str(current_line) + ": " + args.delimiter.join(row_second))
   exit()
 
 with open(args.file, 'r') as input_file:

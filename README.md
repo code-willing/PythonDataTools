@@ -11,7 +11,7 @@ Get a column slice of a delimited data file
 #### Cutting a CSV file by column number
 
 ```
-$ cat ../test/test_2.csv
+$ cat ../test_data/test_2.csv
 column1,column2,column3,column4,
 1,1,1,1,
 2,1,1,1,
@@ -19,7 +19,7 @@ column1,column2,column3,column4,
 4,3,2,1,
 5,4,3,2,
 
-$ python cut_columns.py -f ../test/test_2.csv -c 1,2
+$ python cut_columns.py -f ../test_data/test_2.csv -c 1,2
 column1,column2,
 1,1,
 2,1,
@@ -31,7 +31,7 @@ column1,column2,
 #### Cutting a CSV by column name
 
 ```
-$ cat ../test/test_2.csv
+$ cat ../test_data/test_2.csv
 column1,column2,column3,column4,
 1,1,1,1,
 2,1,1,1,
@@ -39,7 +39,7 @@ column1,column2,column3,column4,
 4,3,2,1,
 5,4,3,2,
 
-$ python cut_columns.py -f ../test/test_2.csv -n column1,column2
+$ python cut_columns.py -f ../test_data/test_2.csv -n column1,column2
 column1,column2
 1,1,
 2,1,
@@ -57,7 +57,7 @@ Get the total sum of a column in a delimited data file
 #### Sum a CSV column by column number
 
 ```
-$ cat ../test/test_1.csv
+$ cat ../test_data/test_1.csv
 column1,column2,column3,column4,
 1,1,1,1,
 1,1,1,1,
@@ -65,7 +65,7 @@ column1,column2,column3,column4,
 1,1,1,1,
 1,1,1,1,
 
-$ python sum_column.py -f ../test/test_1.csv -c 2 --has_header
+$ python sum_column.py -f ../test_data/test_1.csv -c 2 --has_header
 Lines read     : 5
 Total Sum      : 5
 ```
@@ -73,7 +73,7 @@ Total Sum      : 5
 #### Sum a CSV column by column name
 
 ```
-$ cat ../test/test_1.csv
+$ cat ../test_data/test_1.csv
 column1,column2,column3,column4,
 1,1,1,1,
 1,1,1,1,
@@ -81,7 +81,7 @@ column1,column2,column3,column4,
 1,1,1,1,
 1,1,1,1,
 
-$ python sum_column.py -f ../test/test_1.csv -n column2 --has_header
+$ python sum_column.py -f ../test_data/test_1.csv -n column2 --has_header
 Lines read     : 5
 Total Sum      : 5
 ```
@@ -95,7 +95,7 @@ Get the unique values from a column in a delimited data file
 #### Getting unique values in a CSV column by column number
 
 ```
-$ cat ../test/test_2.csv
+$ cat ../test_data/test_2.csv
 column1,column2,column3,column4,
 1,1,1,1,
 2,1,1,1,
@@ -103,11 +103,11 @@ column1,column2,column3,column4,
 4,3,2,1,
 5,4,3,2,
 
-$ python unique_values.py -f ../test/test_2.csv -c 1 --has_header
+$ python unique_values.py -f ../test_data/test_2.csv -c 1 --has_header
 Number of Unique Values in column: 5
 [1,2,3,4,5]
 
-$ python unique_values.py -f ../test/test_2.csv -c 3 --has_header
+$ python unique_values.py -f ../test_data/test_2.csv -c 3 --has_header
 Number of Unique Values in column: 3
 [1,2,3]
 ```
@@ -115,7 +115,7 @@ Number of Unique Values in column: 3
 #### Getting unique values in a CSV column by column name
 
 ```
-$ cat ../test/test_2.csv
+$ cat ../test_data/test_2.csv
 column1,column2,column3,column4,
 1,1,1,1,
 2,1,1,1,
@@ -123,7 +123,7 @@ column1,column2,column3,column4,
 4,3,2,1,
 5,4,3,2,
 
-$ python unique_values.py -f ../test/test_2.csv -n column3
+$ python unique_values.py -f ../test_data/test_2.csv -n column3
 Number of Unique Values in column: 3
 [1,2,3]
 ```
@@ -135,14 +135,14 @@ Verfiy that all rows in delimited data have the same number of columns
 ### Example Usage
 
 ```
-$ cat ../test/test_3.csv
+$ cat ../test_data/test_3.csv
 column1,column2,column3,column4,
 1,1,1,1,
 1,1,1,
 1,1,1,1,
 1,1,1,1,
 
-$ python verify_columns.py -f ../test/test_3.csv
+$ python verify_columns.py -f ../test_data/test_3.csv
 Number of Header Columns: 5
 Mismatched number of columns at line: 3
 Number of columns at line 3: 4
